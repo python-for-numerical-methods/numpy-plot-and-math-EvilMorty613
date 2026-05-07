@@ -9,10 +9,3 @@ def normalize_array(input_array):
         return np.zeros_like(arr)
     
     return (arr - min_val) / (max_val - min_val)
-
-
-# Test (optional)
-if __name__ == "__main__":
-    test_data = [10, 20, 30, 40, 50]
-    print("Original:", test_data)
-    print("Normalized:", normalize_array(test_data))

@@ -16,9 +16,13 @@ def normalized_array(data):
     # המרת הקלט ל-numpy array לצורך חישובים וקטוריים
     data = np.array(data)
     
-   import numpy as np
+import numpy as np
 
 def normalize_array(input_array):
+    """
+    Normalizes a 1D array to [0, 1] using Min-Max scaling.
+    Returns zeros if all values are the same.
+    """
     arr = np.array(input_array)
     min_val = np.min(arr)
     max_val = np.max(arr)
@@ -27,11 +31,10 @@ def normalize_array(input_array):
         return np.zeros_like(arr)
     
     return (arr - min_val) / (max_val - min_val)
-    pass
-    # חשוב לזכור להחליף את pass ב- return
 
+
+# Test code (you can keep or remove)
 if __name__ == "__main__":
-    # כאן הסטודנטים יכולים להריץ בדיקה עצמית מהירה
     test_data = [10, 20, 30, 40, 50]
-    print(f"Original: {test_data}")
-    print(f"Normalized: {normalized_array(test_data)}")
+    print("Original:", test_data)
+    print("Normalized:", normalize_array(test_data))

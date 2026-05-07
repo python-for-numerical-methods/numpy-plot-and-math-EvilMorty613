@@ -1,6 +1,6 @@
 import numpy as np
 
-def normalize_array(input_array):
+def normalized_array(input_array):
     arr = np.array(input_array)
     min_val = np.min(arr)
     max_val = np.max(arr)
